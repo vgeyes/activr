@@ -1,0 +1,15 @@
+activr/services/MatchingService.class
+activr/config/StaticResourceConfiguration.class
+activr/model/Activity$2.class
+activr/repository/MatchRepository.class
+activr/model/Activity$5.class
+activr/model/Activity$4.class
+activr/model/Matched.class
+activr/controllers/ProfilePictureRestController.class
+activr/exceptions/ForbiddenException.class
+activr/exceptions/InvalidUsernameException.class
+activr/exceptions/UploadException.class
+activr/model/Activity$1.class
+activr/model/Activity$6.class
+activr/exceptions/NoMatchFoundException.class
+activr/model/Activity$3.class

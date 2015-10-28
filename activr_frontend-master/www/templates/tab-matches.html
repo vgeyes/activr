@@ -1,0 +1,16 @@
+<ion-view view-title="Matches">
+    <ion-content>
+        <ion-list>
+            <div class="item item-text-wrap" ng-if="matches.length == 0">Sorry, you have no matches.</div>
+            <div class="list card" ng-repeat="match in matches">
+                <div class="item item-avatar">
+                    <img ng-src="{{match.account2.image}}" err-src="img/default_profile_pic.jpg">
+                    <h2>{{match.account2.f_name}} {{match.account2.l_name}}</h2>
+                    <p>{{match.account2.phoneNumber}}</p>
+                </div>
+                <div class="item">Matched interest: {{match.activity | capitalize:true}}</div>
+                <div class="item">Skill Level: {{match.skill | skillWord | capitalize:true}}</div>
+            </div>
+        </ion-list>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: Activr
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: makix310
+Implementation-Vendor-Id: activr
+Created-By: IntelliJ IDEA
+Build-Jdk: 1.8.0_05
+Main-Class: activr.ActivrApplication
+

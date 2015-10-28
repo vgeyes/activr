@@ -1,0 +1,95 @@
+<ion-view view-title="Account">
+    <ion-content>
+        <ion-list>
+
+            <div class="item item-divider item-text-wrap">Primary Activity (matched first)</div>
+            <label class="item item-input item-select">
+                <div class="input-label">
+                    Main Activity
+                </div>
+                <select ng-model="mainActivity.activity">
+                    <option ng-repeat="activity in activities" value="{{activity}}">{{activity | capitalize:true}}</option>
+                </select>
+            </label>
+            <label class="item item-input item-select">
+                <div class="input-label">
+                    Skill Level
+                </div>
+                <select ng-model="mainActivity.skill">
+                    <option value="0">Beginner</option>
+                    <option value="1" selected>Intermediate</option>
+                    <option value="2">Advanced</option>
+                </select>
+            </label>
+
+            <div class="item item-divider item-text-wrap">Additional Interests</div>
+
+            <div class="item item-checkbox item-select" ng-repeat="activity in account2.interests" ng-if="activity.activity != mainActivity.activity">
+                <label class="checkbox">
+                    <input type="checkbox" name="{{activity.activity}}" value="{{activity}}" ng-model="activity.isInterest">
+                </label>
+                {{activity.activity | capitalize:true}}
+                <select ng-if="activity.isInterest" ng-model="activity.skill">
+                    <option value="0">Beginner</option>
+                    <option value="1" selected>Intermediate</option>
+                    <option value="2">Advanced</option>
+                </select>
+            </div>
+
+            <div class="item item-divider item-text-wrap">Account Settings</div>
+            <label class="item item-thumbnail-left" ng-click="changePic()">
+                <img ng-src="{{account2.image}}" err-src="img/default_profile_pic.jpg">
+                <h2>{{account2.username}}</h2>
+                <p>Change Profile Picture</p>
+            </label>
+            <label class="item item-input">
+                <span class="input-label">First Name</span>
+                <input type="text" placeholder="First Name" ng-model="account2.f_name">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Last Name</span>
+                <input type="text" placeholder="Last Name" ng-model="account2.l_name">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Phone Number</span>
+                <input type="tel" placeholder="Phone Number" ng-model="account2.phoneNumber">
+            </label>
+            <label class="item item-input item-select">
+                <div class="input-label">
+                    Gender
+                </div>
+                <select ng-model="account2.gender">
+                    <option value="MALE" selected>Male</option>
+                    <option value="FEMALE">Female</option>
+                </select>
+            </label>
+            <!--
+            <div class="item item-toggle">
+                Same gender matches only
+                <label class="toggle toggle-positive">
+                    <input type="checkbox">
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </div>
+            <div class="item item-toggle">
+                Notifications
+                <label class="toggle toggle-positive">
+                    <input type="checkbox">
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </div>
+            -->
+
+            <div class="item">
+                <button class="button button-block button-positive" ng-click="logout()">
+                    Log Out
+                </button>
+            </div>
+
+        </ion-list>
+    </ion-content>
+</ion-view>

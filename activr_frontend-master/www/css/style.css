@@ -1,0 +1,125 @@
+/* Card styling */
+
+@font-face {
+    font-family: 'Railway';
+    src: url('Railway.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+td-cards {
+    display: block;
+}
+
+td-card {
+    position: absolute;
+    left: 50%;
+    margin: 80px 0 40px -150px;
+    width: 300px;
+    /* height: 300px;
+    border: 1px solid #999; */
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.2);
+    border-radius: 6px;
+    background-color: rgb(255,255,255);
+}
+
+.td-card .title {
+    height: 40px;
+    font-size: 15px;
+    padding: 15px;
+}
+
+td-card .image {
+    position: absolute;
+    top: 40px;
+    width: 100%;
+}
+
+td-card img {
+    width: 100%;
+    border-radius: 6px;
+    object-position: 0 -80px;
+}
+
+/* Overlay styling*/
+
+.overlayBox {
+    position: absolute;
+    left: 50%;
+    height: 98%;
+    width: 100%;
+    top: -80px;
+    opacity: 0;
+    margin: 80px 0 0 -149px;
+}
+
+.boxed {
+    height: 50px;
+    width: 100px;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 30px;
+}
+
+.yes-text {
+    background-color: rgba(0,256,0,0.2);
+}
+
+.yesBox {
+    margin: 10% 60% 0% 10%;
+    border: 2px solid #00FF00;
+    color: rgb(0, 256, 0);
+    -webkit-transform: rotate(-25deg);
+}
+
+.no-text {
+    background-color: rgba(256,0,0,0.2);
+}
+
+.noBox {
+    margin: 10% 10% 0% 60%;
+    border: 2px solid #FF0000;
+    color: rgb(256, 0, 0);
+    -webkit-transform: rotate(25deg);
+}
+
+.fade {
+    -webkit-transition: 0.2s opacity linear;
+    transition: 0.2s opacity linear;
+    opacity: 0;
+}
+
+.profile-image-card {
+    height: 160px;
+    background-size: cover;
+    background-position: center center;
+}
+
+.item-checkbox .checkbox {
+    right: inherit;
+}
+
+/*
+.loginback{
+    background-image: url("/img/background.png");
+    background-size: cover;
+    background-position: center center;
+    box-shadow: inset 0px 1px 3px 0px rgba(206,145,145,0.50);
+
+}
+
+.item-image{
+    width: 100px;
+    height: 150px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10%;
+
+
+}
+
+.item-stacked-label{
+    border-width: 0;
+    font-family: "Railway";
+}
+*/

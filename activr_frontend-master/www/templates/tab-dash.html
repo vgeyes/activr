@@ -1,0 +1,26 @@
+<ion-view view-title="Home">
+  <ion-content class="padding">
+      <td-cards>
+          <td-card ng-repeat="card in cards" on-destroy="cardDestroyed($index)"
+                   on-swipe-right="cardSwiped('right')" on-swipe-left="cardSwiped('left')">
+              <!--<div class="profile-image-card" style="background-image:url('{{card.account2.image}}');"></div>-->
+              <div class="profile-image-card">
+                  <img ng-src="{{card.account2.image}}" err-src="img/default_profile_pic_wide.jpg" err-style="object-position:0 0;">
+              </div>
+              <div class="list" ng-if="card.id != -1">
+                  <div class="item">Name: {{card.account2.f_name}} {{card.account2.l_name}}</div>
+                  <div class="item">Matched Activity: {{card.activity | capitalize:true}}</div>
+                  <div class="item">Skill Level: {{card.skill | skillWord | capitalize:true}}</div>
+              </div>
+              <div ng-if="card.id == -1" class="padding text-center">
+                  Sorry, there were no potential matches. Swipe left or right to try again.
+              </div>
+          </td-card>
+      </td-cards>
+  </ion-content>
+    <div class="bar bar-footer bar-positive">
+        <button class="button button-icon icon ion-close-circled"></button>
+        <div class="title"></div>
+        <button class="button button-icon icon ion-checkmark-circled"></button>
+    </div>
+</ion-view>
